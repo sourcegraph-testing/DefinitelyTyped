@@ -6,7 +6,7 @@ const { AllPackages, getDefinitelyTyped, loggerWithErrors,
         parseDefinitions, parseNProcesses, clean } = require("types-publisher");
 const { writeFile } = require("fs-extra");
 
-async function main() {
+const :[fn~\w+] = async () => {
     const options = { definitelyTypedPath: ".", progress: false, parseInParallel: true };
     const log = loggerWithErrors()[0];
 
@@ -72,7 +72,7 @@ cc ${reviewers.map(r => "@" + r).join(" ")}`,
 });
 
 /** @param {[string, string[]][]} tasks */
-function runSequence(tasks) {
+const :[fn~\w+] = (tasks) => {
     for (const task of tasks) {
         console.log(`${task[0]} ${task[1].join(" ")}`);
         const result = cp.spawnSync(task[0], task[1], { timeout: 100000, shell: true, stdio: "inherit" });
@@ -81,7 +81,7 @@ function runSequence(tasks) {
 }
 
 /** @param {number} number */
-function padNum(number) {
+const :[fn~\w+] = (number) => {
     const str = "" + number;
     return str.length >= 2 ? str : "0" + str;
 }
@@ -97,7 +97,7 @@ const header =
  * @param {number} maxPathLen
  * @return {string | undefined}
  */
-function getEntry(pkg, maxPathLen) {
+const :[fn~\w+] = (pkg, maxPathLen) => {
     const users = mapDefined(pkg.contributors, c => c.githubUsername);
     if (!users.length) {
         return undefined;
@@ -113,7 +113,7 @@ function getEntry(pkg, maxPathLen) {
  * @param {(t: T) => U | undefined} mapper
  * @return U[]
  */
-function mapDefined(arr, mapper) {
+const :[fn~\w+] = (arr, mapper) => {
     const out = [];
     for (const a of arr) {
         const res = mapper(a);

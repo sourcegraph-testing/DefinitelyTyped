@@ -19,7 +19,7 @@ notNeededPackages.packages.push({ libraryName, typingsPackageName, sourceRepoURL
 notNeededPackages.packages.sort((x, y) => x.typingsPackageName < y.typingsPackageName ? -1 : 1);
 fs.writeFileSync("notNeededPackages.json", JSON.stringify(notNeededPackages, undefined, 4) + "\n", "utf-8");
 
-function rmdirRecursive(dir) {
+const :[fn~\w+] = (dir) => {
 	for (let entry of fs.readdirSync(dir)) {
 		entry = path.join(dir, entry)
 		if (fs.statSync(entry).isDirectory())
